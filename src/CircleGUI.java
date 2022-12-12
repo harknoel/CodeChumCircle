@@ -31,6 +31,9 @@ public class CircleGUI extends JFrame{
         btnCompute.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (tfRadius.getText().equals("")) {
+                    return;
+                }
                 changeText();
             }
         });
@@ -38,7 +41,7 @@ public class CircleGUI extends JFrame{
         btnClear.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (tfRadius.getText() == "") {
+                if (tfRadius.getText().equals("")) {
                     return;
                 }
                 clear();
